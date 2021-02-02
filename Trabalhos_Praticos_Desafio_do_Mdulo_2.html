@@ -1,0 +1,116 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Desafio do Módulo 2 -- ePortfolio Eduardo Schiavon</title>
+  <link href="eportfolio.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <a href="#skip_navigation" id="skip_navigation_link">Skip Navigation</a>
+    <a href="http://www.instructure.com" title="Created with Canvas"><img class="logo" src="logo.png" alt="logo"/></a>
+    <h1>Desafio do Módulo 2</h1>
+    <h2><a href="Quem__Eduardo_Schiavon_Bemvindo.html">ePortfolio Eduardo Schiavon</a> &#187; <a href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">Trabalhos Praticos</a></h2>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div id="nav-level2">
+    <ul>
+      <li class=""><a href="Quem__Eduardo_Schiavon_Bemvindo.html">Quem é Eduardo Schiavon</a></li>
+      <li class="current"><a href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">Trabalhos Praticos</a></li>
+      <li class=""><a href="Postagem_nos_Foruns_Frum_de_Debate_do_Mdulo_1.html">Postagem nos Foruns</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div id="content">
+    <a name="skip_navigation"></a>
+    <h2>Desafio do Módulo 2</h2>
+    <div id="page_content">
+        
+<div class="section " id="page_section_0">
+  <div class="section_content">
+        <p><span style="font-size: 14pt;"><strong>Módulo 2 Coleta e Obtenção de Dados</strong></span></p>
+<p><strong>Objetivos</strong><br>Exercitar os seguintes conceitos trabalhados no Módulo:</p>
+<p><strong>* Coletar dados de API e armazenar em um banco de dados relacional (MySQL).</strong><br><strong>* Coletar e tratar dados de arquivos.</strong><br><strong>* Criar e manipular banco de dados não relacional (MongoDB).</strong></p>
+<p style="text-align: center;"><strong>Enunciado</strong></p>
+<p style="text-align: center;"><br>Para realizar o desafio, utilize os arquivos que estão em anexo. São eles:<br>* “der.png”: Diagrama entidade relacionamento para a base de dados de pessoas.<br>* “videogame_sales_mongo”: Documentos para importar no MongoDB.<br>* “videogame_sales_readme”: Descrição dos atributos dos documentos utilizados no<br>MongoDb.<br>Os dados das vendas de jogos de videogame foram extraídos do site<br>https://www.vgchartz.com/ através de um Web scraping utilizando o pacote BeautifulSoup<br>em Python. O código está disponível publicamente através do gitHub:<br><a class="external" href="https://github.com/GregorUT/vgchartzScrape" target="_blank"><span>https://github.com/GregorUT/vgchartzScrape</span><span class="ui-icon ui-icon-extlink ui-icon-inline" title="Links para um site externo."><span class="screenreader-only">Links para um site externo.</span></span></a>.</p>
+<p style="text-align: center;"><br><strong>Atividades</strong></p>
+<p style="text-align: center;"><br>Os alunos deverão desempenhar as seguintes atividades:</p>
+<p style="text-align: center;"><br>1. Para responder às questões de 1 a 6, siga as seguintes instruções:<br>a. Você deverá coletar todos os dados disponíveis no endpoind da seguinte API:<br>https://api-coleta-dados.herokuapp.com/api/pessoas.<br>b. Após a coleta, você deverá verificar quais pessoas estão com o campo “idade”<br>nulos, calcular a idade a partir da data de nascimento e preenchê-los.<br>c. Verificar também as pessoas que não possuem o ano de nascimento, apenas<br>o dia e o mês. Você deverá calcular o ano de nascimento a partir da idade e<br>preencher corretamente a data de nascimento.<br>d. Você deverá salvar todos os dados em um banco de dados MySQL, para isso,<br>siga os passos a seguir:<br>e. Crie um banco de dados com o nome “db_desafio” e crie as tabelas conforme<br>a imagem em anexo do diagrama de entidade e relacionamento “der.png”.<br>Fique atento aos nomes das tabelas, dos atributos e os seus tipos de dados,<br>siga o DER.<br>f. Após criar o banco, insira todos os registros. Fique atento, pois os dados<br>deverão ser inseridos conforme à estrutura do banco. Logo, você deverá<br>povoar todas as tabelas do banco e prestar atenção nos Ids atribuídos para<br>manter o relacionamento entre as tabelas.<br>g. Exemplo: para o seguinte retorno, você deverá inserir a sigla do estado na<br>tabela estado e se ela já tiver sido inserida não realizar a inserção. Inserir a<br>cidade na tabela de cidade e o id do respectivo estado cadastrado na tabela<br>estado. Inserir a cor na tabela de cor e se ela já tiver sido inserida não deverá<br>ser inserida novamente, fazer o mesmo para o tipo sanguíneo. Após, inserir<br>os dados da pessoa na tabela pessoa com os respectivos ID das tabelas<br>relacionadas a ela.<br>h. Após realizar todos os passos, reponda as questões de 1 a 6.</p>
+<p style="text-align: center;"><br>2. Para responder às questões de 7 a 15, siga as seguintes instruções:<br>a. Crie uma coleção no mongoDB e importe o arquivo<br>“videogame_sales_mongo”.<br>b. Após a importação dos documentos para mongo, crie consultas que<br>respondam as questões de 7 a 15.<br>c. Para ajudar nas consultas realizados com o mongo, acesse os sites:<br>https://felipetoscano.com.br/consultar-documento-no-mongodb/ e o<br>https://pymongo.readthedocs.io/en/stable/tutorial.html.</p>
+<p style="text-align: center;"><strong>Respostas Finais</strong></p>
+<p style="text-align: center;"><br>Os alunos deverão desenvolver a prática e, depois, responder às seguintes questões<br>objetivas:</p>
+<p><strong><a class="" title="Link" href="https://online.igti.com.br/eportfolios/324/Quem__Eduardo_Schiavon" data-preview-alt="">Home</a></strong></p>
+<p><strong><a class="" title="Link" href="https://online.igti.com.br/eportfolios/324/Trabalhos_Praticos" data-preview-alt="">Trabalhos Praticos</a></strong></p>
+<p><strong><a class="" title="Link" href="https://online.igti.com.br/eportfolios/324/Postagem_nos_Foruns" data-preview-alt="">Postagem nos Foruns</a></strong></p>
+  </div>
+</div>
+
+        
+<div class="section read_only" id="page_section_1">
+  <div class="section_content">
+          <div style="margin-bottom: 10px;">
+            Student Submission for Desafio do Módulo 2, created Dec 19, 2020 at 10:23pm
+          </div>
+            <ul>
+            </ul>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div id="sidebar">
+    <div class="section_header">
+      Trabalhos Praticos
+    </div>
+    <ul id="page_list">
+        <li id="page_443" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">
+            <span class="name">Trabalho Prático do Módulo 1 </span>
+          </a>
+        </li>
+        <li id="page_444" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_1.html">
+            <span class="name">Desafio do Módulo 1</span>
+          </a>
+        </li>
+        <li id="page_449" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_2_.html">
+            <span class="name">Trabalho Prático do Módulo 2                                         </span>
+          </a>
+        </li>
+        <li id="page_450" class="page current">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_2.html">
+            <span class="name">Desafio do Módulo 2</span>
+          </a>
+        </li>
+        <li id="page_451" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_3.html">
+            <span class="name">Trabalho Prático do Módulo 3</span>
+          </a>
+        </li>
+        <li id="page_452" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_3.html">
+            <span class="name">Desafio do Módulo 3</span>
+          </a>
+        </li>
+        <li id="page_482" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_4.html">
+            <span class="name">Trabalho Prático do Módulo 4</span>
+          </a>
+        </li>
+        <li id="page_481" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_4.html">
+            <span class="name">Desafio do Módulo 4</span>
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+
+</body>
+</html>

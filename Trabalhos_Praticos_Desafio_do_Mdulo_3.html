@@ -1,0 +1,129 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Desafio do Módulo 3 -- ePortfolio Eduardo Schiavon</title>
+  <link href="eportfolio.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <a href="#skip_navigation" id="skip_navigation_link">Skip Navigation</a>
+    <a href="http://www.instructure.com" title="Created with Canvas"><img class="logo" src="logo.png" alt="logo"/></a>
+    <h1>Desafio do Módulo 3</h1>
+    <h2><a href="Quem__Eduardo_Schiavon_Bemvindo.html">ePortfolio Eduardo Schiavon</a> &#187; <a href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">Trabalhos Praticos</a></h2>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div id="nav-level2">
+    <ul>
+      <li class=""><a href="Quem__Eduardo_Schiavon_Bemvindo.html">Quem é Eduardo Schiavon</a></li>
+      <li class="current"><a href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">Trabalhos Praticos</a></li>
+      <li class=""><a href="Postagem_nos_Foruns_Frum_de_Debate_do_Mdulo_1.html">Postagem nos Foruns</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div id="content">
+    <a name="skip_navigation"></a>
+    <h2>Desafio do Módulo 3</h2>
+    <div id="page_content">
+        
+<div class="section " id="page_section_0">
+  <div class="section_content">
+        <p><span style="font-size: 14pt;"><strong>Módulo 3 Processamento de Dados Utilizando o Ecossistema Hadoop.</strong></span></p>
+<p><strong>Objetivos</strong><br>Exercitar os seguintes conceitos trabalhados no Módulo:</p>
+<p><strong>* Iniciar o Apache Hive.</strong><br><strong>* Carregar uma base de dados para o HDFS.</strong><br><strong>* Executar consultas na base de dados.</strong><br><strong>* Analisar os resultados.</strong></p>
+<p style="text-align: center;"><strong>Enunciado</strong></p>
+<p style="text-align: center;"><br>Para essa atividade, o aluno deverá assistir atentamente as seguintes aulas, disponíveis<br>no ambiente virtual de aprendizagem:</p>
+<p style="text-align: center;"><br>1. Instalando a máquina virtual.</p>
+<p style="text-align: center;"><br>2. Executando comandos básicos do Ecossistema Hadoop e do HDFS.</p>
+<p style="text-align: center;"><br>3. Prática: importação e manipulação de dados: Manipulação de dados com o Hive.</p>
+<p style="text-align: center;"><br><strong>Atividades</strong></p>
+<p style="text-align: center;"><br>Os alunos deverão desempenhar as seguintes atividades:<br>1. Iniciar os 5 serviços do Hadoop, por meio do comando</p>
+<p style="text-align: center;"><br>/usr/local/hadoop/sbin/start-all.sh.<br>2. Por meio do comando -mkdir, criar um diretório chamado Desafio no HDFS.</p>
+<p style="text-align: center;"><br>3. Inserir no diretório Desafio, o arquivo covidData.txt. Esse arquivo se encontra<br>no seguinte endereço do sistema de arquivos do sistema operacional da máquina<br>virtual: /usr/local/hadoop/Dados. Para inserir o arquivo, utilize o comando –<br>put.</p>
+<p style="text-align: center;"><br>4. Iniciar o Hive em /usr/local/hive/bin/hive. Se houver algum erro de<br>Schema, seguir os passos para correção, apresentados no vídeo “Manipulação de<br>dados com o Hive”.</p>
+<p style="text-align: center;"><br>5. Criar um database chamado dbDesafio, por meio do comando create<br>database.</p>
+<p style="text-align: center;"><br>6. Em seguida, por meio do comando create table, crie uma tabela chamada<br>DadosCovid, que armazene os seguintes campos do arquivo covidData.txt:<br>dataOcorrencia String<br>siglaPais String<br>descPais String<br>regiao String<br>novosCasos int<br>casosAcumulados int<br>novosObitos int<br>obitosAcumulados int<br>i) Lembre-se que os campos do arquivo covidData.txt estão separados<br>por vírgula e os registros por ‘\n’.<br>ii) Salve a tabela no seguinte destino do HDFS: /Desafio. Use o STORED<br>AS TEXTFILE LOCATION para isso.</p>
+<p style="text-align: center;"><br>7. Faça a importação dos dados que estão no HDFS para a nova tabela, usando o<br>comando LOAD DATA INPATH.</p>
+<p style="text-align: center;"><br>8. Execute uma sentença SQL que conte todos os registros da tabela DadosCovid.<br>Para isso, utilize a função count(*) do SQL. Anote o resultado.</p>
+<p style="text-align: center;"><br>9. Execute uma sentença SQL que verifique quantas comunicações os países<br>Uruguay e Brazil fizeram cada um durante o período de apuração do arquivo.<br>Lembre-se, cada linha do arquivo é uma comunicação. Para isso, utilize a cláusula<br>where. Anote o resultado.</p>
+<p style="text-align: center;"><br>10.Execute a seguinte sentença: select avg(novosCasos) from DadosCovid<br>where descPais = “France”; Anote o resultado.</p>
+<p style="text-align: center;"><br>11.Execute uma sentença que apure quantos novos casos e quantos novos óbitos<br>foram comunicadas no dia 26/05/2020, considerando todos os países. Anote o<br>resultado.</p>
+<p style="text-align: center;"><br>12.Execute o seguinte comando: describe extended DadosCovid. Copie o<br>resultado apresentado em tela.</p>
+<p style="text-align: center;"><br>13.Execute a sentença: select concat(dataOcorrencia, “ “, siglaPais,<br>“ “, descPais) from DadosCovid where novosCasos = 501; Anote o<br>resultado.</p>
+<p style="text-align: center;"><br>14.Execute a sentença: select região, count(1) from DadosCovid group<br>by regiao order by regiao; Anote os resultados.</p>
+<p style="text-align: center;"><br><strong>Respostas Finais</strong><br>Os alunos deverão desenvolver a prática e, depois, responder às seguintes questões<br>objetivas:</p>
+<p><strong><a class="" title="Link" href="https://online.igti.com.br/eportfolios/324/Quem__Eduardo_Schiavon" data-preview-alt="">Home</a></strong></p>
+<p><strong><a class="" title="Link" href="https://online.igti.com.br/eportfolios/324/Trabalhos_Praticos" data-preview-alt="">Trabalhos Praticos</a></strong></p>
+<p><strong><a class="" title="Link" href="https://online.igti.com.br/eportfolios/324/Postagem_nos_Foruns" data-preview-alt="">Postagem nos Foruns</a></strong></p>
+  </div>
+</div>
+
+        
+<div class="section read_only" id="page_section_1">
+  <div class="section_content">
+          <div style="margin-bottom: 10px;">
+            Student Submission for Desafio do Módulo 3, created Jan 19 at  4:03am
+          </div>
+            <ul>
+            </ul>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div id="sidebar">
+    <div class="section_header">
+      Trabalhos Praticos
+    </div>
+    <ul id="page_list">
+        <li id="page_443" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">
+            <span class="name">Trabalho Prático do Módulo 1 </span>
+          </a>
+        </li>
+        <li id="page_444" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_1.html">
+            <span class="name">Desafio do Módulo 1</span>
+          </a>
+        </li>
+        <li id="page_449" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_2_.html">
+            <span class="name">Trabalho Prático do Módulo 2                                         </span>
+          </a>
+        </li>
+        <li id="page_450" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_2.html">
+            <span class="name">Desafio do Módulo 2</span>
+          </a>
+        </li>
+        <li id="page_451" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_3.html">
+            <span class="name">Trabalho Prático do Módulo 3</span>
+          </a>
+        </li>
+        <li id="page_452" class="page current">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_3.html">
+            <span class="name">Desafio do Módulo 3</span>
+          </a>
+        </li>
+        <li id="page_482" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_4.html">
+            <span class="name">Trabalho Prático do Módulo 4</span>
+          </a>
+        </li>
+        <li id="page_481" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_4.html">
+            <span class="name">Desafio do Módulo 4</span>
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+
+</body>
+</html>

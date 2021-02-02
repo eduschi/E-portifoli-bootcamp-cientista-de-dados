@@ -1,0 +1,121 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Desafio do Módulo 4 -- ePortfolio Eduardo Schiavon</title>
+  <link href="eportfolio.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <a href="#skip_navigation" id="skip_navigation_link">Skip Navigation</a>
+    <a href="http://www.instructure.com" title="Created with Canvas"><img class="logo" src="logo.png" alt="logo"/></a>
+    <h1>Desafio do Módulo 4</h1>
+    <h2><a href="Quem__Eduardo_Schiavon_Bemvindo.html">ePortfolio Eduardo Schiavon</a> &#187; <a href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">Trabalhos Praticos</a></h2>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div id="nav-level2">
+    <ul>
+      <li class=""><a href="Quem__Eduardo_Schiavon_Bemvindo.html">Quem é Eduardo Schiavon</a></li>
+      <li class="current"><a href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">Trabalhos Praticos</a></li>
+      <li class=""><a href="Postagem_nos_Foruns_Frum_de_Debate_do_Mdulo_1.html">Postagem nos Foruns</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div id="content">
+    <a name="skip_navigation"></a>
+    <h2>Desafio do Módulo 4</h2>
+    <div id="page_content">
+        
+<div class="section " id="page_section_0">
+  <div class="section_content">
+        <p><span style="font-size: 18pt;"><strong>Desafio Módulo 4 </strong></span></p>
+<p> </p>
+<p><strong>Técnicas para o processamento do Big Data</strong></p>
+<p>Objetivos</p>
+<p>Exercitar os seguintes conceitos trabalhados no Módulo:<br>* Pré-processamento dos dados.<br>* Detecção de anomalias.<br>* Processamento dos dados.<br>* Correlações.<br>* Spark MlLib.</p>
+<p style="text-align: center;"><br><strong>Enunciado</strong></p>
+<p style="text-align: center;">A análise de dados é a ciência que estuda e interpreta os dados, a fim de possibilitar<br>a tomada de decisão mais assertiva. Por meio da análise de dados é possível identificar<br>oportunidades, prever o impacto de decisões, escolher qual investimento é mais lucrativo e<br>conhecer melhor o cliente.<br>Nesse sentido, coletar e analisar dados sobre os consumidores e o público-alvo de<br>um negócio é essencial para garantir que as necessidades dos clientes sejam atendidas.<br>Logo, empregar técnicas como a segmentação de clientes auxilia na tarefa de aproximar e<br>alinhar expectativas. Assim, é possível aumentar a competitividade do negócio e a<br>satisfação dos consumidores.<br>Neste desafio, vamos realizar uma análise sobre um banco de dados composto por<br>clientes de um shopping. Nessa análise, vamos tentar compreender melhor quais são as<br>características dos nossos consumidores. Para isso, vamos aplicar diferentes técnicas<br>estatísticas, como correlação e regressão para identificar possíveis tendências e<br>relacionamentos nos dados, investigar anomalias e aplicar o algoritmo K-means para dividir<br>o conjunto de clientes em grupos com características similares. Portanto, será possível<br>identificar as particularidades de cada um desses segmentos de clientes e poder oferecer<br>produtos e serviços que atendam às necessidades de cada grupo.<br>Atividades<br>O aluno deverá desempenhar as seguintes atividades:</p>
+<p style="text-align: center;">1. Acessar o site https://community.cloud.databricks.com/ e criar a conta gratuita. O<br>tutorial de criação da conta gratuita está presente na plataforma Canvas, logo abaixo<br>da apostila, no item “Arquivos complementares” com o nome<br>“tutorial_databricks_TPD.pdf”.</p>
+<p style="text-align: center;"><br>2. Acessar e baixar os arquivos “Mall_Customers.csv” e<br>“desafio_bootcamp_TPD.ipynb”, presentes na pasta:<br>https://drive.google.com/drive/folders/1uXq_QGjGPEtvDStFx2lGy9NRP0j3cROP?usp<br>=sharing</p>
+<p style="text-align: center;"><br>3. Criar um novo “Cluster” para a atividade, seguindo os passos presentes no tutorial de<br>criação da conta no databricks.com (arquivo tutorial_databricks_TPD.pdf).</p>
+<p style="text-align: center;"><br>4. Realizar o upload do “Mall_Customers.csv” para a plataforma databricks.</p>
+<p style="text-align: center;"><br>5. Acesse a conta criada. No menu lateral esquerdo acesse o ícone “Data”. A Figura 1<br>mostra esse ícone.<br>Figura 1 – Acesso ao ícone “Data”.</p>
+<p style="text-align: center;"><br>6. Na nova janela que irá abrir, clique em “Add Data”. A Figura 2 mostra o<br>procedimento.<br>Figura 2 – Procedimento para adicionar o banco de dados.</p>
+<p style="text-align: center;"><br>7. Na tela seguinte, arraste e solte o arquivo “Mall_Customers.csv” dentro do campo<br>“Drop files to upload, or browser”. A Figura 3 mostra o procedimento.<br>Figura 3 – Adicionando o arquivo “Mall_Customers.csv”.</p>
+<p style="text-align: center;"><br>8. Após arrastar e soltar o arquivo e o upload tiver terminado, NÃO é necessário<br>escolher nenhuma das opções mostradas, apenas prossiga para o passo 9.</p>
+<p style="text-align: center;"><br>9. Após finalizado o upload do arquivo, acesse o “Workspace”, clique na “setinha” no<br>canto superior direito da aba e, depois, clique em “Import”. A Figura 4 mostra as<br>etapas a serem seguidas.<br>Figura 4 – Etapas para o Upload do arquivo “desafio_bootcamp_TPD.ipynb”.</p>
+<p style="text-align: center;"><br>9. Arraste e solte o arquivo “desafio_bootcamp_TPD.ipynb” ou clique em “browser”<br>para realizar o upload do arquivo.</p>
+<p style="text-align: center;"><br>10. Execute as células em sequência.</p>
+<p style="text-align: center;"><br>11. Responda às perguntas do desafio.<br>Respostas Finais<br>Os alunos deverão desenvolver a prática e, depois, responder às seguintes questões<br>objetivas:</p>
+  </div>
+</div>
+
+        
+<div class="section read_only" id="page_section_1">
+  <div class="section_content">
+          <div style="margin-bottom: 10px;">
+            Student Submission for Desafio do Módulo 4, created Jan 24 at 10:39pm
+          </div>
+            <ul>
+            </ul>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div id="sidebar">
+    <div class="section_header">
+      Trabalhos Praticos
+    </div>
+    <ul id="page_list">
+        <li id="page_443" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">
+            <span class="name">Trabalho Prático do Módulo 1 </span>
+          </a>
+        </li>
+        <li id="page_444" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_1.html">
+            <span class="name">Desafio do Módulo 1</span>
+          </a>
+        </li>
+        <li id="page_449" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_2_.html">
+            <span class="name">Trabalho Prático do Módulo 2                                         </span>
+          </a>
+        </li>
+        <li id="page_450" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_2.html">
+            <span class="name">Desafio do Módulo 2</span>
+          </a>
+        </li>
+        <li id="page_451" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_3.html">
+            <span class="name">Trabalho Prático do Módulo 3</span>
+          </a>
+        </li>
+        <li id="page_452" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_3.html">
+            <span class="name">Desafio do Módulo 3</span>
+          </a>
+        </li>
+        <li id="page_482" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_4.html">
+            <span class="name">Trabalho Prático do Módulo 4</span>
+          </a>
+        </li>
+        <li id="page_481" class="page current">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_4.html">
+            <span class="name">Desafio do Módulo 4</span>
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+
+</body>
+</html>

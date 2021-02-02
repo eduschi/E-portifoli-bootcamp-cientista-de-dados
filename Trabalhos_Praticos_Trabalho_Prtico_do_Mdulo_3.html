@@ -1,0 +1,119 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <title>Trabalho Prático do Módulo 3 -- ePortfolio Eduardo Schiavon</title>
+  <link href="eportfolio.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <a href="#skip_navigation" id="skip_navigation_link">Skip Navigation</a>
+    <a href="http://www.instructure.com" title="Created with Canvas"><img class="logo" src="logo.png" alt="logo"/></a>
+    <h1>Trabalho Prático do Módulo 3</h1>
+    <h2><a href="Quem__Eduardo_Schiavon_Bemvindo.html">ePortfolio Eduardo Schiavon</a> &#187; <a href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">Trabalhos Praticos</a></h2>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div id="nav-level2">
+    <ul>
+      <li class=""><a href="Quem__Eduardo_Schiavon_Bemvindo.html">Quem é Eduardo Schiavon</a></li>
+      <li class="current"><a href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">Trabalhos Praticos</a></li>
+      <li class=""><a href="Postagem_nos_Foruns_Frum_de_Debate_do_Mdulo_1.html">Postagem nos Foruns</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div id="content">
+    <a name="skip_navigation"></a>
+    <h2>Trabalho Prático do Módulo 3</h2>
+    <div id="page_content">
+        
+<div class="section " id="page_section_0">
+  <div class="section_content">
+        <p><span style="font-size: 14pt;"><strong>Módulo 3 Processamento de dados utilizando o Ecossistema</strong></span><br><strong></strong></p>
+<p><strong>Objetivos</strong><br>Exercitar os seguintes conceitos trabalhados no Módulo:</p>
+<p><strong>* Manipular o HDFS (Hadoop Distributed FileSystem, formatando o sistema de</strong><br><strong>arquivos e executando operações com arquivos e diretórios).</strong><br><strong>* Acessar as ferramentas de Gerenciamento do Ecossistema Hadoop.</strong><br><strong>* Alterar o código fonte de um programa, compilá-lo e executá-lo.</strong></p>
+<p style="text-align: center;"><strong>Enunciado</strong><br>Para esta atividade, o aluno deverá assistir atentamente as seguintes aulas, disponíveis no<br>ambiente virtual de aprendizagem, exatamente na ordem em que se apresenta abaixo:</p>
+<p style="text-align: center;"><br>1. Instalando a máquina virtual;</p>
+<p style="text-align: center;"><br>2. Executando os comandos básicos do Ecossistema Hadoop e do HDFS;</p>
+<p style="text-align: center;"><br>3. Criando, compilando e executando um Programa com o Hadoop/MapReduce;</p>
+<p style="text-align: center;"><br><strong>Atividades</strong><br>Os alunos deverão desempenhar as seguintes atividades:</p>
+<p style="text-align: center;"><br>1 – Instalando a Máquina Virtual<br>Deve-se assistir ao vídeo “Instalando a Máquina Virtual” e seguir todos os passos<br>existentes nele. Ao final, deve-se verificar se a máquina virtual está inicializando<br>normalmente e se o login está sendo realizado.<br>Após executar o login (login: igti senha: igti) na máquina virtual, inicie o Terminal<br>do Linux, conforme demonstrado na Figura 1.<br>Figura 1 – Tela Inicial da Máquina Virtual.</p>
+<p style="text-align: center;"><br>2 – Preparando o HDFS e iniciando os serviços do Hadoop<br>A ferramenta Hadoop já foi previamente instalada no ambiente virtual e encontrase no diretório /usr/local/hadoop. Sendo assim, devemos ir até o diretório de<br>instalação do Hadoop utilizando o seguinte comando:<br>cd /usr/local/hadoop<br>Após a digitação do comando acima, teremos a tela apresentada na Figura 2.<br>Figura 2 – Diretório de instalação do Hadoop.<br>Antes de tudo, é necessário realizar a formatação do sistema de arquivos<br>distribuídos do Hadoop (HDFS). Esse processo envolve dois passos, sendo: (i) eliminar<br>os diretórios temporários; (ii) realizar a formatação do HDFS.<br>(i) Delete todos os subdiretórios que estão dentro da pasta tmp localizada dentro<br>do diretório padrão do Hadoop (/usr/local/hadoop). Utilize o comando<br>abaixo:<br>rm –r /usr/local/hadoop/tmp/*<br>(ii) Para formatar o HDFS, execute o comando abaixo:<br>/usr/local/hadoop/bin/hdfs namenode –format<br>Após alguns segundos, a tela apresentada na Figura 3 será exibida:<br>Figura 3 – Tela de Formatação do Hadoop (resultado).<br>Neste momento, você apagou todos os arquivos e diretórios do sistema de arquivos<br>distribuídos do Hadoop (HDFS). Esses comandos específicos do HDFS serão melhor<br>trabalhados nas próximas atividades práticas e também durante nossas aulas. Por<br>enquanto, iremos utilizar apenas a formatação. Agora, já estamos prontos para iniciar os<br>serviços do Hadoop.<br>Estamos dentro do diretório de instalação do Hadoop, e a próxima tarefa será iniciar<br>os serviços da ferramenta. Iremos utilizar um arquivo que se encontra dentro do diretório<br>/usr/local/hadoop/sbin chamado start-all.sh. Para isso, execute o comando<br>abaixo:<br>/usr/local/hadoop/sbin/start-all.sh<br>Observe que ao utilizar o comando start-all, o Hadoop emite uma mensagem<br>informando que esse comando foi descontinuado. Apesar disso, o comando funciona<br>perfeitamente e, caso queira, você pode utilizar os comandos start-yarn.sh e start-dfs.sh.<br>O efeito será exatamente o mesmo.<br>Neste momento, é esperado que todos os serviços do Hadoop tenham sido<br>iniciados. Para conferir se todos os serviços foram devidamente iniciados (DataNode,<br>ResourceManager, NameNode, SecondaryNameNode e NodeManager), digite o comando<br>jps no Terminal. Esse comando lista os serviços Java que estão sendo executados na<br>máquina. Após a execução do comando jps, se tudo estiver correto, a tela da Figura 4 será<br>apresentada. Observe que todos os cinco serviços necessários para a execução do Hadoop<br>encontram-se listados:<br>Figura 4 – Tela com os cinco serviços do Hadoop inicializados.<br>Importante: se ao listar os processos com o comando jps, não aparecerem como<br>ativos os processos DataNode, ResourceManager, NameNode, SecondaryNameNode<br>e NodeManager, você deverá seguir os seguintes passos:<br>1) Pare o serviço do Hadoop: /usr/local/hadoop/sbin/stop-all.sh<br>2) Delete novamente os arquivos temporários: rm –r /usr/local/hadoop/tmp/*<br>3) Veja se os arquivos e diretórios temporários foram realmente excluídos, usando o <br>comando:<br>ls /usr/local/hadoop/tmp<br>4) Formate novamente o HDFS: /usr/local/hadoop/bin/hdfs namenode –<br>format.<br>5) Reinicie os serviços do Hadoop: /usr/local/hadoop/sbin/start-all.sh<br>6) Consulte novamente os serviços do Hadoop com o comando jps.<br>Obs.: você não deverá avançar no tutorial caso os cinco processos do Hadoop<br>não estejam em execução.</p>
+<p style="text-align: center;"><br>3 – Compilando o programa no Hadoop/MapReduce<br>Nesse momento, já estamos com os serviços do Hadoop executando plenamente e<br>já podemos escrever e compilar o nosso primeiro programa. Inicialmente, dentro do diretório<br>/usr/local/hadoop foi criado um diretório chamado ExemploIGTI. Você deverá<br>navegar nesse diretório e verificar que o mesmo possui um arquivo e um outro diretório.<br>O arquivo build_ExemploIGTI.xml armazena os dados de compilação do<br>nosso programa, e o arquivo ExemploIGTI.java, que se encontra dentro do diretório<br>src, possui o código fonte em Java referente ao nosso programa de exemplo.<br>Vá para o diretório ExemploIGTI utilizando o seguinte comando:<br>cd /usr/local/hadoop/ExemploIGTI/<br>Liste o conteúdo do diretório ExemploIGTI:<br>ls<br>Em seguida, vá para o diretório src utilizando o seguinte comando:<br>cd /usr/local/hadoop/ExemploIGTI/src<br>Liste o conteúdo do diretório src:<br>ls<br>Para compilar o nosso primeiro programa Hadoop, iremos utilizar o Apache Ant,<br>que já foi previamente instalado na máquina. O comando para compilação é o seguinte:<br>ant –f /usr/local/hadoop/ExemploIGTI/build_ExemploIGTI.xml makejar<br>Após compilar o programa, a mensagem da Figura 5 irá aparecer na tela:<br>Figura 5 – Tela do resultado da compilação.<br>Em seguida, vamos verificar como ficou o conteúdo do nosso diretório<br>ExemploIGTI, dando um comando ls. A Figura 6 apresenta o resultado.<br>cd /usr/local/hadoop/ExemploIGTI<br>ls<br>Figura 6 – Novo conteúdo do diretório ExemploIGTI.<br>Observe que foi criado o arquivo ExemploIGTI.jar. Esse é o arquivo compilado<br>que será enviado para o Hadoop durante a execução.<br>4 - Alterando o programa no Hadoop/MapReduce<br>Nesse momento, devemos realizar as alterações no código fonte do programa para<br>que que possamos executá-lo.<br>Primeiramente, observe que já temos algum código escrito no arquivo <br>ExemploIGTI.java. Para verificar o conteúdo desse arquivo, dirija-se até a pasta src e abra<br>o arquivo utilizando o aplicativo Vim.<br>cd /usr/local/hadoop/ExemploIGTI/src<br>vim ExemploIGTI.java<br>Ao abrir o arquivo com o Vim, a seguinte tela da Figura 7 deverá ser apresentada.<br>Observe que já existe uma parte do código fonte implementada. O que temos ali é somente<br>a estrutura do programa Hadoop, que explicamos em nossas aulas gravadas. Temos a<br>classe ExemploIGTI, que possui o método main, a classe MapIGTI que implementa o nosso<br>método Map e a classe ReduceIGTI, que implementa o nosso método Reduce. Observe<br>que o método run da classe ExemploIGTI se encontra vazio, somente a estrutura foi criada.<br>Figura 7 – Estrutura do programa Hadoop/MapReduce.<br>Você deverá assistir a aula “Criando, compilando e executando um Programa com<br>o Hadoop/MapReduce” e realizar as seguintes implementações aqui no nosso código fonte:<br>1. Criar o objeto JobConf;<br>2. Criar os objetos para manipular os diretórios de Entrada e Saída do HDFS, com<br>os objetos Path e FileSystem e o método mkdirs;<br>3. Copiar um arquivo do sistema de arquivos do Linux para o HDFS, utilizando o<br>método copyFromLocalFile;<br>4. Configurar o diretório de Entrada e de Saída do seu job MapReduce, utilizando<br>FIleInputFormat e FileOutputFormat;<br>5. Atribuir os tipos de Key e Value, por meio dos métodos setOutputKeyClass e<br>setOutputValueClass;<br>6. Atribuir as classes Mapper e Reducer, por meio dos métodos setMapperClass e<br>SetReducerClass;<br>7. Implementar a chamada ao método RunJob;<br>8. Implementar o conteúdo do método Map da classe MapIGTI e do método Reduce<br>da classe ReduceIGTI.<br>Atenção: todos esses passos são detalhadamente explicados na aula gravada<br>“Criando, compilando e executando um Programa com o Hadoop/MapReduce”.<br>Após a conclusão da sua implementação, feche o Vim (ESC + :wq) e compile<br>novamente o seu programa, utilizando o comando abaixo:<br>ant –f /usr/local/hadoop/ExemploIGTI/build_ExemploIGTI.xml makejar</p>
+<p style="text-align: center;"><br>5 – Executando o programa no Hadoop/MapReduce<br>Após compilar nosso programa e gerar o nosso jar, iremos submetê-lo para a<br>execução em um job Hadoop/MapReduce. A linha de comando que iremos utilizar está<br>destacada abaixo:<br>/usr/local/hadoop/bin/hadoop jar<br>/usr/local/hadoop/ExemploIGTI/ExemploIGTI.jar IGTI.ExemploIGTI<br>O primeiro parâmetro que utilizamos é o /usr/loca/hadoop/bin/hadoop. O<br>arquivo Hadoop que fica dentro da pasta bin, é o responsável por enviar os programas<br>para a execução do framework. Em seguida, é passada a palavra jar, indicando que<br>iremos enviar um arquivo compilado do tipo jar para execução. O terceiro parâmetro é a<br>localização desse jar no sistema de arquivos do Linux. Lembre-se que compilamos esse<br>arquivo na pasta ExemploIGTI. Por último, estamos informando a classe que possui o<br>método main (IGTI.ExemploIGTI).<br>A Figura 8 apresenta o comando sendo enviado e o job sendo executado.<br>Figura 8 – Logs de execução de um job Hadoop/MapReduce.</p>
+<p style="text-align: center;"><br>6 – Consultando os resultados<br>Para consultar os resultados de sua execução, acesse os diretórios do HDFS por<br>meio do browser da sua máquina virtual, no endereço http://localhost:9870. Você deverá ir<br>até o menu Utilities  Browse the file System. Clique no diretório user e depois em IGTI. O<br>resultado do seu trabalho se encontra no diretório PastaSaida. A Figura 9 apresenta o<br>resultado dessa operação:<br>Figura 9 – Conteúdo do HDFS após a execução.<br>Dentro do diretório PastaSaida, há o arquivo part-00000. Esse é o resultado da<br>execução da sua aplicação. Esse arquivo se encontra no HDFS, você deverá salvá-lo no <br>sistema de arquivos do Linux para conseguir visualizar o seu conteúdo. Clique sobre o<br>arquivo, depois em download e salve-o. Ele será salvo em sua pasta Downloads.<br>Para acessá-lo, digite no terminal:<br>sudo vim /home/igti/Downloads/part-00000</p>
+<p style="text-align: center;"><br><strong>Respostas Finais</strong><br>Os alunos deverão desenvolver a prática e, depois, responder às seguintes questões<br>objetivas:</p>
+<p><strong><a class="" title="Link" href="https://online.igti.com.br/eportfolios/324/Quem__Eduardo_Schiavon" data-preview-alt="">Home</a></strong></p>
+<p><strong><a class="" title="Link" href="https://online.igti.com.br/eportfolios/324/Trabalhos_Praticos" data-preview-alt="">Trabalhos Praticos</a></strong></p>
+<p><strong><a class="" title="Link" href="https://online.igti.com.br/eportfolios/324/Postagem_nos_Foruns" data-preview-alt="">Postagem nos Foruns</a></strong></p>
+  </div>
+</div>
+
+        
+<div class="section read_only" id="page_section_1">
+  <div class="section_content">
+          <div style="margin-bottom: 10px;">
+            Student Submission for Trabalho Prático do Módulo 3, created Jan 12 at  5:49am
+          </div>
+            <ul>
+            </ul>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div id="sidebar">
+    <div class="section_header">
+      Trabalhos Praticos
+    </div>
+    <ul id="page_list">
+        <li id="page_443" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_1_.html">
+            <span class="name">Trabalho Prático do Módulo 1 </span>
+          </a>
+        </li>
+        <li id="page_444" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_1.html">
+            <span class="name">Desafio do Módulo 1</span>
+          </a>
+        </li>
+        <li id="page_449" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_2_.html">
+            <span class="name">Trabalho Prático do Módulo 2                                         </span>
+          </a>
+        </li>
+        <li id="page_450" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_2.html">
+            <span class="name">Desafio do Módulo 2</span>
+          </a>
+        </li>
+        <li id="page_451" class="page current">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_3.html">
+            <span class="name">Trabalho Prático do Módulo 3</span>
+          </a>
+        </li>
+        <li id="page_452" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_3.html">
+            <span class="name">Desafio do Módulo 3</span>
+          </a>
+        </li>
+        <li id="page_482" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Trabalho_Prtico_do_Mdulo_4.html">
+            <span class="name">Trabalho Prático do Módulo 4</span>
+          </a>
+        </li>
+        <li id="page_481" class="page ">
+          <a class="page_url" href="Trabalhos_Praticos_Desafio_do_Mdulo_4.html">
+            <span class="name">Desafio do Módulo 4</span>
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+
+</body>
+</html>
